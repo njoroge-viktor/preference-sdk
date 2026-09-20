@@ -1,0 +1,53 @@
+{
+  "name": "@njoroge-viktor/preference-sdk",
+  "version": "0.1.0",
+  "description": "Typed toolkit for building, validating and auditing RLHF preference datasets (DPO, GRPO, reward modelling).",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:coverage": "vitest run --coverage",
+    "lint": "eslint src tests --max-warnings 0",
+    "format:check": "prettier --check ."
+  },
+  "keywords": [
+    "rlhf",
+    "dpo",
+    "grpo",
+    "preference",
+    "reward-model",
+    "llm",
+    "evaluation"
+  ],
+  "author": "Victor Njoroge <victornjoroge174@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/njoroge-viktor/preference-sdk.git"
+  },
+  "devDependencies": {
+    "@types/node": "^22.7.5",
+    "@typescript-eslint/eslint-plugin": "^8.8.1",
+    "@typescript-eslint/parser": "^8.8.1",
+    "@vitest/coverage-v8": "^2.1.3",
+    "eslint": "^8.57.1",
+    "prettier": "^3.3.3",
+    "typescript": "^5.6.3",
+    "vitest": "^2.1.3"
+  }
+}
